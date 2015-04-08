@@ -1,6 +1,5 @@
 [user]
 	name = Kim H Madsen
-	email = khm@deif.com
 [gui]
 	encoding = utf-8
 [core]
@@ -18,5 +17,5 @@
 [difftool]
 	#prompt = false
 [difftool "bc3"]
-	#cmd = \"c:/program files (x86)/beyond compare 3/BCompare.exe\" "$(cygpath -w $LOCAL)" "$REMOTE"
+	cmd = \"c:/program files (x86)/beyond compare 3/BCompare.exe\" "$(cygpath -w $LOCAL)" "$REMOTE"
 
