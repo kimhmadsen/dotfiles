@@ -1,21 +1,43 @@
 [user]
-	name = Kim H Madsen
+	name = Kim Hedegaard Madsen
 [gui]
 	encoding = utf-8
 [core]
-	editor = vim 
+	editor = vim
+	autocrlf = input
+	preloadindex = true
+	fscache = true
 	#autocrlf = false
 	#autocreol = false
 [push]
 	default = simple
 [alias]
+	st = status -sb
+	ci = commit
+	br = branch
+	co = checkout
+	lg = log --no-merges --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	last = log -1 HEAD
+	ready = rebase -i @{u}
+	standup = log --all --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --since yesterday --author Kim
+	purr = pull --rebase
+	# Gitlab aliases
+	glmr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
 [diff]
 	#tool = bc3
 [difftool]
 	#prompt = false
-[difftool "bc3"]
-	cmd = \"c:/program files (x86)/beyond compare 3/BCompare.exe\" "$(cygpath -w $LOCAL)" "$REMOTE"
-
+[merge]
+	tool = bc3
+[mergetool "bcwin]
+	path = c:/Program Files/Beyond Compare 4/bcomp.exe
+[difftool "codesys"]
+	cmd = "\"C:\\Program Files (x86)\\3S CODESYS\\CODESYS\\Common\\CODESYS.exe\" --compare \"$LOCAL\" \"$REMOTE\""
+	trustExitCode = false
+[mergetool "codesys"]
+	cmd = "\"C:\\Program Files (x86)\\3S CODESYS\\CODESYS\\Common\\CODESYS.exe\" --compare $(echo $LOCAL | sed s/.\\\\///) $(echo $REMOTE | sed s/.\\\\///)"
+	trustExitCode = false
+[gc]
+	auto = 256
