@@ -1,4 +1,13 @@
 dotfiles
 ========
 
-dotfiles for setting up my development environment
+dotfiles for setting up development environment.
+
+use gnu stow for installing the dotfiles.
+
+Example:
+
+```
+    stow vim
+
+```
