@@ -1,7 +1,9 @@
 [user]
 	name = Kim Hedegaard Madsen
+	email = khm@deif.com
 [gui]
 	encoding = utf-8
+	diffcontext = 8
 [core]
 	editor = vim
 	autocrlf = input
@@ -31,7 +33,7 @@
 	#prompt = false
 [merge]
 	tool = bc3
-[mergetool "bcwin]
+[mergetool "bcwin"]
 	path = c:/Program Files/Beyond Compare 4/bcomp.exe
 [difftool "codesys"]
 	cmd = "\"C:\\Program Files (x86)\\3S CODESYS\\CODESYS\\Common\\CODESYS.exe\" --compare \"$LOCAL\" \"$REMOTE\""
@@ -41,3 +43,5 @@
 	trustExitCode = false
 [gc]
 	auto = 256
+[submodule]
+	recurse = true
