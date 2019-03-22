@@ -17,6 +17,7 @@ set autowrite   " write files when leaving
 "set nowritebackup
 "set noswapfile
 
+" https://github.com/changemewtf/no_plugins
 " https://www.youtube.com/watch?v=XA2WjJbmmoM
 
 syntax enable
