@@ -72,6 +72,16 @@ nnoremap ,header :-1read $HOME/.vim/header.c<CR>j3l
 " - Take over the world
 "   (with much fewer keystrokes)
 
+" BUILD INTEGRATION
+" Configure the `make` command
+set makeprg=make\ -C\ build
+
+" NOW WE CAN
+" - Run :make to run make
+" - :cl to list errors
+" - :cc# jump to error by number
+" - :cn and :cp to navigate forward and back
+
 
 if has('mouse')
   set mouse=a
