@@ -63,6 +63,15 @@ command! MakeTags !ctags -R .
 " NOW WE CAN:
 " - Use ^n and ^p to go back and forth in the suggestion list.
 
+" SNIPPETS:
+" Read an snippets file and move the cursor 
+nnoremap ,html :-1read $HOME/.vim/.skeleton.html<CR>3jwf>a
+nnoremap ,header :-1read $HOME/.vim/header.c<CR>j3l
+
+" NOW WE CAN
+" - Take over the world
+"   (with much fewer keystrokes)
+
 
 if has('mouse')
   set mouse=a
