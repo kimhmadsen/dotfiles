@@ -4,6 +4,7 @@
 [gui]
 	encoding = utf-8
 	diffcontext = 8
+	warndetachedcommit = true
 [core]
 	editor = vim
 	autocrlf = input
@@ -25,6 +26,7 @@
 	ready = rebase -i @{u}
 	standup = log --all --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --since yesterday --author Kim
 	purr = pull --rebase
+	sha  = rev-parse HEAD
 	# Gitlab aliases
 	glmr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
 [diff]
@@ -45,3 +47,5 @@
 	auto = 256
 [submodule]
 	recurse = true
+[color "diff"]
+	whitespace = red reverse
