@@ -1,6 +1,4 @@
 [user]
-	name = Kim Hedegaard Madsen
-	email = khm@deif.com
 [gui]
 	encoding = utf-8
 	diffcontext = 8
@@ -15,7 +13,6 @@
 [push]
 	default = simple
 [alias]
-	st = status -sb
 	ci = commit
 	br = branch
 	co = checkout
@@ -24,9 +21,13 @@
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	last = log -1 HEAD
 	ready = rebase -i @{u}
+	ru = remote update
+	st = status -sb
 	standup = log --all --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --since yesterday --author Kim
 	purr = pull --rebase
 	sha  = rev-parse HEAD
+	su = submodule update
+	sw = switch
 	# Gitlab aliases
 	glmr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
 [diff]
